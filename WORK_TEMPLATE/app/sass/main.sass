@@ -1,0 +1,631 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "../libs/animate-sass/animate"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 1.6em
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	background: #fff
+
+%headbutton
+	background: transparent
+	background-image: none
+	border-width: 1px
+	border-style: solid
+	border-color: #fff
+	border-radius: 3px	
+	white-space: nowrap
+	vertical-align: middle
+	-ms-touch-action: manipulation
+	touch-action: manipulation
+	color: #fff
+	text-decoration: none
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	font-size: 18px
+
+%block
+	position: relative
+	width: 100%
+	height: 80vh
+	z-index: 10
+	color: #ffffff
+
+%paral1
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0  
+	z-index: -100
+	box-shadow : inset 0 0 4px #000
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.6)
+		z-index: -100
+		box-shadow : inset 0 0 4px #000
+
+// HEADER
+.mainHead
+	position: relative
+	overflow-x: hidden
+	color: #fff
+	width: 100%
+	min-height: 100vh
+	background: rgba(0,0,0,0.6)
+
+.logo
+	display: flex
+	justify-content: center
+	margin-top: 20px
+	margin-bottom: 20px
+
+.callBack
+	display: block
+	float: right
+	margin-top: 15%
+
+
+	a	
+		@extend %headbutton	
+		padding:
+			top: 15px
+			bottom: 15px
+			right: 20px
+			left: 20px
+		&:hover
+			color: #34343c
+			background: #fff
+			border-color: #fff
+			text-decoration: none
+			transition-duration: 800ms
+			transition-property: all
+			transition-timing-function: cubic-bezier(0.7,1,0.7,1)
+
+.telNumber, .mail
+	text-align: center
+	margin-top: 5%
+	white-space: nowrap
+
+.telNumber
+	color: #fff	
+	font-weight: 700
+	font-size: 18px
+	padding:
+		top: 5px
+		bottom: 5px
+	&:hover
+		color: #FFDB40
+	i
+		vertical-align: middle
+		padding-right: 1%
+		color:#f88a40
+		&:hover
+			color: #fff
+
+.mail
+	margin-bottom: 20px
+	a
+		vertical-align: middle
+		-ms-touch-action: manipulation
+		touch-action: manipulation
+		color: #fff
+		text-decoration: none
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+		font-size: 18px
+		padding:
+			top: 10px
+			bottom: 5px
+		&:hover
+			color: #FFDB40
+	i
+		vertical-align: middle
+		padding-right: 2%
+		color:#f88a40
+		&:hover
+			color: #fff
+.mainNav
+	position: absolute
+	width: 100%
+	height: auto
+	top: 19%
+	background: rgba(84, 14, 173, 0.8)
+	
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		text-align: center
+
+		li 
+			display: inline-block
+
+			a 
+				display: block
+				min-width: 140px
+				height: 50px
+				line-height: 50px
+				text-align: center
+				text-decoration: none
+				color: #ffffff
+
+				&:hover 
+					background: #340570
+					border-bottom: 5px solid #f88a40
+					border-radius: 3px
+					transition-duration: 400ms
+					transition-property: all
+					transition-timing-function: cubic-bezier(0.7,1,0.7,1)	
+
+.video
+	position: absolute
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100%
+	padding: 0;
+	z-index: -20
+	overflow: hidden
+	text-align: center
+	background: #444
+	video 
+		display: inline-block
+		width: 100%
+
+.headerH1
+	position: relative
+	margin-top: 20%
+	margin-left: 10%
+	width: 100%
+	height: 50vh
+	max-width: 1200px
+
+	h1
+		font-weight: 700
+		font-size: 2.8em
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.7)
+		line-height: 78px
+
+// HEADER_END
+
+// MAIN
+.cardGal
+	position: relative
+	width: 1124px
+	margin: 0 auto
+	.cardWrap
+		width: 100%
+		height: 100%
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		align-content: center 
+		justify-content: center
+		overflow: auto 
+		margin-bottom: 30px
+		.card
+			width: 257px
+			height: 257px
+			padding-left: 0
+			margin-right: 2%
+			margin-bottom: 30px
+			animation-duration: 3s
+			&:hover
+				margin-top: -15px
+				box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9)
+				transition: all .35s ease-in-out
+				border-radius: 6px
+			.cardItem
+				position: relative
+				width: 257px
+				height: 257px
+				background-image: url(../img/5.jpg)
+				background-size: cover
+				background-position: center center
+				border-radius: 6px
+				a
+					display: block
+					width: 100%
+					height: 100%
+					b
+						position: absolute
+						left: 0
+						bottom: 0
+						padding:
+							top: 35px
+							right: 35px
+							bottom: 35px
+							left: 20px
+						font-size: 20px
+						text-transform: uppercase
+						color: #ffffff
+						font-weight: 700
+						font-style: normal
+						line-height: 26px			
+	.margCard
+		margin-top: -90px
+
+.headShow
+	position: relative
+	font-size: 1.8em
+	font-weight: 600
+	background-color: #FFFF00
+	border-radius: 20px 0 0 6px
+	padding: 0.5em
+	padding-left: 1em
+	margin-left: 10%
+	left: 150%
+	-webkit-transition: 1.5s ease-in-out
+	transition: 1.5s ease-in-out
+	&:before
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 100%
+		width: 100%
+		height: 100%
+		background-color: inherit
+
+.block
+	@extend %block	
+	.paral1
+		@extend %paral1
+		background: url(../img/back_paral1.jpg) center no-repeat
+		-webkit-background-size: cover
+		-moz-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		background-attachment: fixed
+		padding:
+			top: 2%
+			left: 15%
+			right: 35%
+		p
+			padding-left: 15px
+			font-size: 27px
+			font-weight: bold
+			text-shadow: 0px 10px 15px black
+			border-left: 5px solid #FFDB40
+			&:before
+				border-left: 5px solid #FFDB40	
+		ol
+			counter-reset: li
+			padding: 0
+			list-style: none
+			li
+				position: relative
+				margin:
+					top: 10px
+					right: 0
+					bottom: 10px
+					left:  60px 
+				padding: 4px 8px
+				border-top: 2px solid #FFDB40
+				font-size: 20px
+				&:before
+					content: counter(li)
+					counter-increment: li
+					position: absolute
+					top: -2px
+					left: -2em
+					width: 2em
+					padding: 4px
+					border-top: 2px solid #FFDB40
+					color: #000000
+					background: #FFDB40
+					font-weight: bold
+					text-align: center
+					border-top-left-radius: 6px
+					border-bottom-left-radius: 6px
+					border-bottom-right-radius: 6px						
+// НАШИ ПАРТНЕРЫ
+.textCenter
+	text-align: center
+	font-size: 40px
+	margin: 
+		top: 50px 
+	span
+		color: #5429ad
+
+.partners
+	margin-bottom: 50px
+	.partner
+		display: flex
+		height: 100%
+		margin: auto
+	.owl-stage
+		display: flex
+		.owl-item
+			margin-top: 30px
+			img
+				display: flex
+				align-self: baseline
+				max-width: 100%
+				width: auto
+				margin: auto
+
+.owl-nav
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 2
+	> div
+		position: absolute
+		top: 120px
+		padding: 
+			left: 10px
+			right: 10px
+		font-size: 30px
+		transition: opacity .5s ease
+		&:hover
+			opacity: .6
+		&.owl-prev
+			left: -60px
+		&.owl-next	
+			right: -60px	
+// MAIN_END
+// FOOTER
+.footGray
+	min-height: 300px
+	background-color: #242424
+	padding:
+		top: 80px
+		bottom: 80px
+	font-size: 14px
+	color: #fff
+
+.callBackFoot
+	display: block
+	margin-top: 20px
+	margin-bottom: 20px
+
+	a	
+		@extend %headbutton	
+		padding:
+			top: 15px
+			bottom: 15px
+			right: 20px
+			left: 20px
+		// -webkit-filter: url("#filter")
+		// filter: url("/#filter")	
+		&:hover
+			color: #34343c
+			background: #fff
+			border-color: #fff
+			text-decoration: none
+			transition-duration: 800ms
+			transition-property: all
+			transition-timing-function: cubic-bezier(0.7,1,0.7,1)
+
+.workScheduleFoot
+	padding:
+		top: 20px
+
+
+.telNumberFoot, .mailFoot
+	text-align: center
+	margin-top: 20px
+	white-space: nowrap
+
+.telNumberFoot
+	font-weight: 700
+	font-size: 18px
+	padding:
+		top: 5px
+		bottom: 5px
+		left: 1%
+	&:hover
+			color: #FFDB40
+	i
+		vertical-align: middle
+		padding-right: 1%
+		color:#f88a40
+		&:hover
+			color: #fff		
+
+.mailFoot
+	a
+		// vertical-align: middle
+		-ms-touch-action: manipulation
+		touch-action: manipulation
+		color: #fff
+		text-decoration: none
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+		font-size: 18px
+		padding:
+			top: 10px
+			bottom: 5px
+			left: 1%
+		&:hover
+			color: #FFDB40
+	i
+		vertical-align: middle
+		padding-right: 1%
+		color:#f88a40
+		&:hover
+			color: #fff	
+
+.map
+	max-height: 200px
+	opacity: .7
+	transition: opacity .8s ease
+	&:hover
+		opacity: 1
+
+// Overlay
+
+.overlayMain
+	display: inline-block
+	position: fixed
+	top: 0
+	left: 0
+	width: 0
+	height: 0
+	opacity: 0
+	background: rgba(0,0,0,0.7)
+	z-index: -200
+	transition: opacity 0.5s ease-out	
+	.show
+		opacity: 1
+		width: 100vw
+		height: 100vh
+		z-index: 900
+
+// MODAL FORM
+#modalOrdercall
+	display: inline-block
+	opacity: 0
+	position: fixed
+	width: 100vw
+	height: 100vh
+	top: 0
+	left: 0
+	z-index: -200
+	text-align: center
+	-webkit-transition: 0.5s ease-out
+	transition: 0.5s ease-out
+	.show
+		display: inline-block
+		opacity: 1
+		z-index: 999
+		.modalWrapper
+			display: inline-block
+			position: relative
+			width: 80%
+			margin:
+				top: 20vh
+				right: 30px
+			max-width: 400px
+			background: #fff
+			border-radius: 10px
+			padding: 10px 20px
+			z-index: 999
+			box-shadow: 2px 5px 5px rgba(0,0,0,0.7)
+			input[type="text"]
+				display: inline-block
+				padding: 10px
+				border: 1px solid #ccc
+				border-radius: 5px
+				margin: 10px
+				width: 80%
+				font-size: 16px
+				&:focus
+					outline: none
+					box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2)
+			.send
+				display: inline-block
+				padding: 10px
+				margin:
+					top: 20px
+					bottom: 10px
+					left: 10px
+					right: 10px	 
+				color:black
+				background: #FF6700
+				border: none 
+				border-radius: 5px
+				font-size: 16px
+				font-weight: bold
+				text-transform: uppercase
+				box-shadow: 2px 4px 2px rgba(0,0,0,0.7)
+				min-width: 200px
+				text-align: center
+				transition: 0.3s ease-out
+				outline: none
+				cursor: pointer		
+				&:hover
+					background: #FFff00
+		.modalClose
+			position: absolute
+			top: -50px
+			right: -50px
+			width: 50px
+			height: 50px
+			-webkit-transition: 0.3s ease-out
+			transition: 0.3s ease-out
+			cursor: pointer
+			svg
+				width: 100%
+				height: 100%	
+				&:hover
+					transform: rotate(90deg)
+// TEMPLATE_PAGE
+.tempBack
+	@extend %block
+	height: 50vh
+	.tempWrap
+		@extend %paral1
+		background: url(../img/backgr2.jpg) center bottom no-repeat  
+		-webkit-background-size: cover
+		-moz-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		background-attachment: fixed
+		padding:
+			left: 5%
+			right: 5%
+		.offer
+			float: right
+			min-height: 300px 
+			margin-top: 30px
+			// background-image: url('../img/priceback.jpg')
+		h2
+			font-size: 40px
+
+@import "media" // Всегда в конце
+
+

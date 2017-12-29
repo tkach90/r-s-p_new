@@ -1,0 +1,25 @@
+{
+  "name": "jquery-stickit",
+  "version": "0.2.14",
+  "main": [
+    "src/jquery.stickit.js"
+  ],
+  "ignore": [
+    "samples",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.6"
+  },
+  "homepage": "https://github.com/emn178/jquery-stickit",
+  "_release": "0.2.14",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.14",
+    "commit": "31a7c303925f24fd1f8b0831c2775e166e8bd5ea"
+  },
+  "_source": "https://github.com/emn178/jquery-stickit.git",
+  "_target": "^0.2.14",
+  "_originalSource": "jquery-stickit",
+  "_direct": true
+}

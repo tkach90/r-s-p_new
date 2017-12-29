@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /test/
+Disallow: /manager/ 
+Disallow: /assets/components/ 
+Disallow: /core/ 
+Disallow: /connectors/ 
+Disallow: /index.php 
+Disallow: *?
+Host: geo-yar.ru
+Sitemap: http://geo-yar.ru/sitemap.xml
